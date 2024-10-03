@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row myDiv">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input class="form-control" id="generateInput" type="text" value="">
+                    <button class="generate-btn" onclick="Generate()">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input class="form-control" id="Input" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                                <div class="button" onclick="Input.value += '7' ">7</div>
+                                <div class="button" onclick="Input.value += '8' ">8</div>
+                                <div class="button" onclick="Input.value += '9' ">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button" onclick="Input.value += '4' ">4</div>
+                                <div class="button" onclick="Input.value += '5' ">5</div>
+                                <div class="button" onclick="Input.value += '6' ">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button" onclick="Input.value += '1' ">1</div>
+                                <div class="button" onclick="Input.value += '2' ">2</div>
+                                <div class="button" onclick="Input.value += '3' ">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button" onclick="Input.value = Input.value.toString().slice(0,-1) ">&lt;</div>
+                                <div class="button" onclick="Input.value += '0' ">0</div>
+                                <div class="button" onclick="Input.value = '' ">C</div>
+                            </div>
+                            <div>
+                                <button type="submit" class="submit-btn" onclick="submitFunction(), submitClick()">Submit</button>
+                                <!-- <p class="action-left">3 try left</p> -->
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="notify-section">
+            <p class="notify" id="Wrong" value=""></p>
+            <p class="notify" id="Right" value=""></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
